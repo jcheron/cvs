@@ -1,6 +1,6 @@
 <h1>Cvs de <?php echo $user->getNom()?></h1>
 <div>
-	<a class="btn btn-default" href="addCv">Ajouter un CV...</a>
+	<a class="btn btn-default" href="User/addCv">Ajouter un CV...</a>
 </div>
 <ul>
 	<?php 
