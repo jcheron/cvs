@@ -4,9 +4,12 @@
 </div>
 <ul>
 	<?php 
+	$index=0;
 	foreach ($user->getCvs() as $cv){
 		echo "<li>".$cv->getAccroche()." - ".$cv->getDateCreation();
-		echo " (".$cv->rubriquesCount()." rubrique(s))</li>";		
+		echo " (".$cv->rubriquesCount()." rubrique(s))";
+		echo "<a href='Rubrique/all/".$index."' class='btn btn-xs btn-primary'>...</a></li>";
+		$index++;
 	}
 	?>
 </ul>

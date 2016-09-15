@@ -63,5 +63,9 @@ class Cv {
 	public function rubriquesCount(){
 		return count($this->rubriques);
 	}
+	public function getRubriques() {
+		return $this->rubriques;
+	}
+	
 	
 }
