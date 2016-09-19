@@ -31,4 +31,3 @@ if(count($urlParts)>0){
 		echo "Le contrôleur {$ctrlName} n'existe pas !";
 	}
 }
-

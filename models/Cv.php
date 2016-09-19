@@ -66,6 +66,5 @@ class Cv {
 	public function getRubriques() {
 		return $this->rubriques;
 	}
-	
-	
+
 }

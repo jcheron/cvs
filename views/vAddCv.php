@@ -6,11 +6,10 @@ use technics\Url;
 <fieldset>
 <legend>CV</legend>
 <div class="form-group">
-<label for="accroche">
-
-</label>
+<label for="accroche"></label>
 <textarea class="form-control" id="accroche" name="accroche" placeholder="Entrez une accroche...">
 <?php echo $cv->getAccroche()?>
+
 </textarea>
 <input class="btn btn-success" type="submit" value="Valider"></fieldset>
 </div>
