@@ -1,4 +1,4 @@
-<form method="post" action="/cvs/rubrique/update/<?php echo $idCv."/".$id ?>">
+<form method="post" action="/cvs/rubriques/<?php echo $action."/".$idCv."/".$id ?>">
 	<div class="form-group">
 		<label>Titre<input type="text" id="titre" name="titre" class="form-control" value="<?php echo $rubrique->getTitre() ?>"></label>
 	</div>

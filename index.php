@@ -2,7 +2,7 @@
 
 $url=$_GET["c"];
 $urlParts=explode("/", $url);
-
+$base_href="/cvs/";
 include_once 'technics/autoload.php';
 session_start();
 $isAjax=(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest');
@@ -12,7 +12,7 @@ if(count($urlParts)>0){
 	$ctrlName="controllers\\".$ctrl;
 	if(class_exists($ctrlName)){
 		if(!$isAjax)
-			include 'views/header.php';
+			include 'views/vHeader.php';
 		$ctrlInstance=new $ctrlName();
 		if(count($urlParts)>1){
 			$method=$urlParts[1];
@@ -25,7 +25,7 @@ if(count($urlParts)>0){
 			$ctrlInstance->index();
 		}
 		if(!$isAjax)
-			include 'views/footer.php';
+			include 'views/vFooter.php';
 
 	}else{
 		echo "Le contrôleur {$ctrlName} n'existe pas !";
