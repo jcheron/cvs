@@ -1,11 +1,15 @@
 <?php
 namespace controllers;
 use models\Cv;
+use technics\Jquery;
+use technics\Url;
 class Users extends BaseController {
 	
 	public function index(){
 		$user=$_SESSION["user"];
 		include "views/vCvsUser.php";
+		Jquery::getOn("click", ".addCv", Url::get("Users/addCv"), "#divResponse");
+		Jquery::getOn("click", ".edit-cv", Url::get("Rubriques/all"), "#divResponse");
 	}
 	
 	public function addCv(){
@@ -16,7 +20,7 @@ class Users extends BaseController {
 			$user->addCv($_POST["accroche"]);
 			include "views/vCvsUser.php";
 		}else{
-			include "views/vAddCv.php";
+			include "views/vEditCv.php";
 		}
 	}
 	
@@ -29,7 +33,7 @@ class Users extends BaseController {
 			$cv->setAccroche($_POST["accroche"]);
 			include "views/vCvsUser.php";
 		}else{
-			include "views/vAddCv.php";
+			include "views/vEditCv.php";
 		}		
 	}
 	
